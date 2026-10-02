@@ -23,7 +23,7 @@ If you use this code, please cite the paper.
 
 ```bibtex
 @unpublished{patricio2026makeham,
-  title={Does a mortality schedule need a {Makeham} term? Calibrating the likelihood-ratio test},
+  title={Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test},
   author={Patricio, Silvio C.},
   year={2026},
   note={Unpublished manuscript}
