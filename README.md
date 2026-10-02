@@ -1,4 +1,4 @@
-# Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test
+# Likelihood-Ratio Tests for the Makeham Term
 
 R code for the numerical illustrations in **Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test**, by Silvio C. Patricio.
 
