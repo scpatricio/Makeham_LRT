@@ -1,6 +1,6 @@
 # When does a mortality schedule need a Makeham term?
 
-Code accompanying the research note *When does a mortality schedule need a Makeham term? The standard test answers at half the stated level* (Silvio C. Patricio, Interdisciplinary Center on Population Dynamics, University of Southern Denmark).
+Code accompanying the research note *Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test* (Silvio C. Patricio, Interdisciplinary Center on Population Dynamics, University of Southern Denmark).
 
 ## About the note
 
