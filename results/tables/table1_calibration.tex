@@ -1,0 +1,21 @@
+% Generated from saved Monte Carlo results by 03_make_tables.R.
+% Mode: full.
+\begin{table}[ht]
+\centering
+\caption{Finite-sample calibration of the Makeham likelihood-ratio test.}
+\label{tab:sim_calibration}
+\begin{tabular}{rrrrr}
+\hline
+$n$ & $\Pr(T\approx0)$ & $\Pr(T>2.7055)$ & $\Pr(T>3.8415)$ & Failed \\
+\hline
+10000 & 0.566 & 0.041 & 0.021 & 0 \\
+100000 & 0.518 & 0.043 & 0.024 & 1 \\
+1000000 & 0.511 & 0.052 & 0.027 & 3 \\
+10000000 & 0.496 & 0.049 & 0.023 & 8 \\
+\hline
+Asymptotic & 0.500 & 0.050 & 0.025 & -- \\
+\hline
+\end{tabular}
+\par\smallskip
+{\footnotesize $B=10000$ per exposure level. Probabilities use successful fits; failures are shown separately. We classify $|T_{\mathrm{raw}}|\leq 1\times10^{-7}$ as numerical zero. }
+\end{table}
