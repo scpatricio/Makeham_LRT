@@ -77,18 +77,6 @@ The positive Makeham constant is `kappa = delta / sqrt(n * j_eff)`. Thus, at a f
 
 Comments in the scripts refer to manuscript section titles rather than equation numbers.
 
-## Parallel execution and resuming
-
-The simulations run in independent PSOCK R sessions, including when called from RStudio on macOS. By default the supplied runner uses the detected physical core count minus two, with a minimum of one. Set `MAKEHAM_WORKERS` explicitly to control this; eight workers is a reasonable starting configuration on an Apple M4 Max with 36 GB of memory. It is not a measured optimum.
-
-Each worker handles one batch at a time, saves its detailed checkpoint, and returns a small progress summary. The seed belongs to the batch, so changing the worker count does not change the simulated counts. Changing batch size does change seed assignment. Math-library threads are limited to one per worker to avoid competing layers of parallel work.
-
-Rerun the simulation script with unchanged settings and source files to resume an interrupted run. Completed checkpoints are reused. The manifest compares settings, source-file hashes and R version before resuming. Comment edits also change a source hash; use a separate run after editing either simulation source file.
-
-A `results/.running/` lock prevents two sessions from writing to the same run and stops post-processing while the run is active. If R crashes, remove this directory only after confirming the original simulation has stopped.
-
-This repository uses `results/` directly. It does not migrate older nested folders or create a `code_snapshot` folder. Existing flat results can be read by the table and figure scripts without rerunning simulations. The rewritten source files will not resume a run created with the older source hashes; keep the original scripts with that run if resumption is needed.
-
 ## Outputs
 
 ```text
@@ -138,15 +126,3 @@ chunk$records[[1]]$fits$GM$attempts    # Diagnostics for each starting point
 ```
 
 GG and GGM fits are available only for the zero-shift scenarios. Checkpoints retain fitted rates, log likelihoods, optimizer messages and raw likelihood-ratio statistics as well as the selected estimates. Full-run files can be large. The included `.gitignore` excludes generated results and local R session files; the scripts recreate the output folders. Keep the original publication results separately if you want an exact record of that run.
-
-## Reading the results
-
-The optimizer minimizes half the Poisson deviance, which gives the same likelihood-ratio statistic as maximizing the Poisson log likelihood. Age centering improves numerical scaling while retaining the original gamma-frailty denominator and parameter interpretation. Both zero Makeham and zero frailty remain attainable.
-
-The Makeham-only comparison fits G versus GM. The joint-boundary comparison fits **GG versus GGM**, estimating frailty under both hypotheses even though its true value is zero. The latter tests only the Makeham term; comparing G versus GGM would be a different test.
-
-The joint critical value uses the **known generating information matrix K**. The experiment isolates the reference-distribution effect; it does not validate a rule that selects a reference from the fitted frailty estimate or establish finite-sample performance for an estimated-K cutoff.
-
-Convergence, projected-score and nesting checks remain in the code because failed fits can distort estimated rejection probabilities. Multiple starting values help, but do not prove that every fit reaches the global optimum. Failed comparisons receive `NA`. Summaries report probabilities among successful fits, failure counts and bounds that treat failed comparisons as either rejections or non-rejections.
-
-Monte Carlo standard errors and Wilson intervals describe simulation uncertainty. The local detection threshold is an asymptotic approximation, so finite-exposure power at that threshold need not equal 80%. In the joint-limit summary, the rejection probability at the simulated quantile uses the same Gaussian draws that defined it; that row is not an independent calibration check.
