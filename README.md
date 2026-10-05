@@ -1,3 +1,5 @@
+[![arXiv shield](https://img.shields.io/badge/arXiv-2610.03685-red.svg?style=flat)](https://arxiv.org/abs/2610.03685)
+
 # Likelihood-Ratio Tests for the Makeham Term
 
 Silvio C. Patricio
