@@ -4,7 +4,7 @@ Silvio C. Patricio
 
 Interdisciplinary Center on Population Dynamics, University of Southern Denmark
 
-**Preprint:** *[[Link to be added](https://doi.org/10.48550/arXiv.2610.03685)]*
+**Preprint:** *https://doi.org/10.48550/arXiv.2610.03685*
 
 Code and reproducibility materials for the manuscript *Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test*.
 
@@ -16,8 +16,9 @@ If you use this code, please cite the paper.
 
 **Paper**
 
-> Patricio, S. C. (2026). *Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test*. Unpublished manuscript.
-> Preprint link: [https://doi.org/10.48550/arXiv.2610.03685].
+> Patricio, S. C. (2026). *Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test*. [Preprint]. arXiv. [https://arxiv.org/abs/2610.03685](https://arxiv.org/abs/2610.03685)
+> 
+> Preprint link: https://doi.org/10.48550/arXiv.2610.03685
 
 **BibTeX**
 
