@@ -1,6 +1,6 @@
 [![arXiv shield](https://img.shields.io/badge/arXiv-2610.03685-red.svg?style=flat)](https://arxiv.org/abs/2610.03685)
 
-# Likelihood-Ratio Tests for the Makeham Term
+# Boundary inference for the Makeham term in mortality models
 
 Silvio C. Patricio
 
@@ -8,7 +8,7 @@ Interdisciplinary Center on Population Dynamics, University of Southern Denmark
 
 **Preprint:** *https://doi.org/10.48550/arXiv.2610.03685*
 
-Code and reproducibility materials for the manuscript *Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test*.
+Code and reproducibility materials for the manuscript.
 
 The simulations study how to test for an age-independent Makeham component in mortality models. They illustrate finite-sample calibration, the power to detect a positive Makeham term, and the change in the test's reference distribution when a gamma-frailty variance is estimated at a true value of zero. All death counts are simulated; no external data or data-access credentials are required.
 
@@ -16,7 +16,7 @@ The simulations study how to test for an age-independent Makeham component in mo
 
 If you use this code, please cite the paper.
 
-**Paper**
+**Preprint**
 
 > Patricio, S. C. (2026). *Does a mortality schedule need a Makeham term? Calibrating the likelihood-ratio test*. [Preprint]. arXiv. [https://arxiv.org/abs/2610.03685](https://arxiv.org/abs/2610.03685)
 > 
