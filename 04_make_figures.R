@@ -35,24 +35,24 @@ pilot_note <- if (settings$B < 10000L) "Pilot run - not final manuscript results
 # Horizontal legend adjustment used in the manuscript figures.
 h_shift = 15
 
-figure_theme <- theme_minimal(base_size = 10) +
+figure_theme <- theme_minimal() +
   theme(
     legend.position = "bottom",
     legend.justification = "center",
     legend.key.width = grid::unit(1, "cm"),
     legend.key.height = grid::unit(0.2, "cm"),
-    legend.spacing.y = grid::unit(1, "pt"),
+    # legend.spacing.y = grid::unit(1, "pt"),
     legend.box.spacing = grid::unit(2, "pt"),
     legend.margin = margin(0, h_shift, 0, -h_shift),
     
     plot.title.position = "plot",
     plot.title = element_text(
-      face = "bold",
-      size = 12,
+      # face = "bold",
+      # size = 12,
       hjust = 0
     ),
     
-    plot.margin = margin(0, 0, 0, 0)
+    # plot.margin = margin(0, 0, 0, 0)
   )
 
 
@@ -146,9 +146,9 @@ if (!is.null(tail_data)) {
 # --- Save PDFs only ---------------------------------------------------------
 # The ggplot objects remain available to edit or display in RStudio.
 ggsave(file.path(out, "figure1_local_power.pdf"), plot = figure_power,
-       width = 5, height = 4, units = "in", bg = "white")
+       width = 7, height = 4, units = "in", bg = "white")
 ggsave(file.path(out, "figure2_joint_boundary.pdf"), plot = figure_joint,
-       width = 5, height = 4, units = "in", bg = "white")
+       width = 7, height = 4, units = "in", bg = "white")
 if (interactive()) {
   print(figure_power)
   print(figure_joint)
